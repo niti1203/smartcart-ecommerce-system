@@ -43,35 +43,21 @@ public class JwtFilter extends OncePerRequestFilter {
         String authHeader =
                 request.getHeader("Authorization");
 
-        // ❌ No token
+        // ✅ No token → continue request
         if (authHeader == null
                 || !authHeader.startsWith("Bearer ")) {
 
-            response.setStatus(
-                    HttpServletResponse.SC_FORBIDDEN
-            );
-
-            response.getWriter().write(
-                    "JWT Token Missing"
-            );
-
+            filterChain.doFilter(request, response);
             return;
         }
 
         String token =
                 authHeader.substring(7);
 
-        // ❌ Invalid token
+        // ✅ Invalid token → continue request
         if (!jwtUtil.isTokenValid(token)) {
 
-            response.setStatus(
-                    HttpServletResponse.SC_FORBIDDEN
-            );
-
-            response.getWriter().write(
-                    "Invalid JWT Token"
-            );
-
+            filterChain.doFilter(request, response);
             return;
         }
 

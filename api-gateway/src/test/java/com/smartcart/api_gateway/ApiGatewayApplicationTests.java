@@ -1,10 +1,10 @@
-package com.smartcart.configserver;
+package com.smartcart.api_gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigServerApplicationTests {
+class ApiGatewayApplicationTests {
 
 	@Test
 	void contextLoads() {

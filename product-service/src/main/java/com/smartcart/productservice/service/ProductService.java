@@ -28,6 +28,46 @@ public class ProductService {
                 .map(this::convertToDTO)
                 .toList();
     }
+    public List<ProductDTO> getProductsSortedByPrice() {
+
+        return repository.findAll()
+                .stream()
+                .sorted(
+                        (p1, p2) ->
+                                Double.compare(
+                                        p1.getPrice(),
+                                        p2.getPrice()
+                                )
+                )
+                .map(this::convertToDTO)
+                .toList();
+    }
+    public List<ProductDTO> getExpensiveProducts() {
+
+        return repository.findAll()
+                .stream()
+                .filter(product ->
+                        product.getPrice() > 50000
+                )
+                .map(this::convertToDTO)
+                .toList();
+    }
+    public List<String> getProductNames() {
+
+        return repository.findAll()
+                .stream()
+                .map(Product::getName)
+                .toList();
+    }
+    public Product getProductById(Long id) {
+
+        return repository.findById(id)
+                .orElseThrow(() ->
+                        new ProductNotFoundException(
+                                "Product not found with id: " + id
+                        )
+                );
+    }
     public Product updateProduct(Long id, Product updatedProduct) {
 
         Product product = repository.findById(id)

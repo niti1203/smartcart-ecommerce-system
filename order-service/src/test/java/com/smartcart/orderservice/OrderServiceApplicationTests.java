@@ -1,10 +1,10 @@
-package com.smartcart.configserver;
+package com.smartcart.orderservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigServerApplicationTests {
+class OrderServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

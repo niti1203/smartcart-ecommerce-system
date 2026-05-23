@@ -44,8 +44,7 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/products",
                                 "/products/**"
-                        )
-                        .hasAnyRole("USER", "ADMIN")
+                        ).permitAll()
 
                         // ✅ ADMIN ONLY
                         .requestMatchers(

@@ -23,6 +23,27 @@ public class ProductController {
     public List<ProductDTO> getAllProducts() {
         return service.getAllProducts();
     }
+    @GetMapping("/{id}")
+    public Product getProductById(
+            @PathVariable Long id
+    ) {
+        return service.getProductById(id);
+    }
+    @GetMapping("/sorted")
+    public List<ProductDTO> getSortedProducts() {
+
+        return service.getProductsSortedByPrice();
+    }
+    @GetMapping("/expensive")
+    public List<ProductDTO> getExpensiveProducts() {
+
+        return service.getExpensiveProducts();
+    }
+    @GetMapping("/names")
+    public List<String> getProductNames() {
+
+        return service.getProductNames();
+    }
 
     // ADMIN ONLY
     @PostMapping("/add")
