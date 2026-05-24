@@ -1,0 +1,64 @@
+/*Filtering*/
+SELECT *
+FROM products
+WHERE price > 50000;
+
+/*SORTING*/
+SELECT *
+FROM products
+ORDER BY description ASC;
+
+/*Adding total revenure*/
+SELECT SUM(price) AS total_revenue
+FROM orders;
+
+/*Adding total quantites*/
+SELECT SUM(quantity) AS total_stocks
+FROM products;
+
+/*Counting total order plaed*/
+SELECT COUNT(*) AS total_orders
+FROM orders;
+
+/*Orders count per user*/
+SELECT username,
+       COUNT(*) AS total_orders
+FROM orders
+GROUP BY username;
+
+/*Finding highest priced product*/
+SELECT MAX(price) AS highest_price
+FROM products;
+
+/*Finding lowest priced product*/
+SELECT MIN(price) AS lowest_price
+FROM products;
+
+/*Orders with product details*/
+SELECT
+    o.id AS order_id,
+    o.username,
+    p.name AS product_name,
+    p.price
+FROM orders o
+JOIN products p
+ON o.product_id = p.id;
+
+/*Total amount spent by each user*/
+SELECT
+    username,
+    SUM(price) AS total_spent
+FROM orders
+GROUP BY username;
+
+USE smartcart;
+ALTER TABLE users
+ADD CONSTRAINT unique_username
+UNIQUE (username);
+
+
+Select * FROM USERS where role="ADMIN";
+
+Select * From products;
+
+Select * From users;
