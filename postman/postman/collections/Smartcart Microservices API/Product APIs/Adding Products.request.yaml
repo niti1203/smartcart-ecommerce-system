@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:8081/products/add
+method: POST
+headers:
+  Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3OTUwOTkxMywiZXhwIjoxNzc5NTEzNTEzfQ.v18qc51NnjVHJwAMLurtPX5vTi3380iiw9-wesFBd3o
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\":\"T.V\",\r
+
+    \    \"description\":\"40inches wide\",\r
+
+    \    \"price\":45000,\r
+
+    \    \"quantity\":7\r
+
+    }"
+order: 2000

@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:8081/products/update/2
+method: PUT
+headers:
+  Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3OTUwOTkxMywiZXhwIjoxNzc5NTEzNTEzfQ.v18qc51NnjVHJwAMLurtPX5vTi3380iiw9-wesFBd3o
+body:
+  type: json
+  content: "{\r
+
+    \     \"name\": \"Laptop Pro\",\r
+
+    \  \"description\": \"Updated Gaming Laptop\",\r
+
+    \  \"price\": 60000,\r
+
+    \  \"quantity\": 5\r
+
+    }"
+order: 3000

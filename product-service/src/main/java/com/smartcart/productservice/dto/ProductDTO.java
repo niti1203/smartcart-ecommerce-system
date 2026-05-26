@@ -1,27 +1,23 @@
 package com.smartcart.productservice.dto;
 
+import java.math.BigDecimal;
+
 public class ProductDTO {
-
     private Long id;
-
     private String name;
-
     private String description;
-
-    private Double price;
+    private BigDecimal price;
+    private Integer quantity;
 
     public ProductDTO() {
     }
 
-    public ProductDTO(Long id,
-                      String name,
-                      String description,
-                      Double price) {
-
+    public ProductDTO(Long id, String name, String description, BigDecimal price, Integer quantity) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.quantity = quantity;
     }
 
     public Long getId() {
@@ -48,11 +44,19 @@ public class ProductDTO {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 }

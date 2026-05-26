@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:8083/orders/place
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"id\": 15,\r
+
+    \  \"productId\": 4,\r
+
+    \  \"quantity\": 1,\r
+
+    \  \"username\": \"sarawin\"\r
+
+    }"
+order: 1000

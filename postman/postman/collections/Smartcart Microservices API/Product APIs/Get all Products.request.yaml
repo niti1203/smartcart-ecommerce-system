@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:8081/products
+method: GET
+headers:
+  Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3OTUwOTkxMywiZXhwIjoxNzc5NTEzNTEzfQ.v18qc51NnjVHJwAMLurtPX5vTi3380iiw9-wesFBd3o
+order: 1000
