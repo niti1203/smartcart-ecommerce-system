@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:8082/users/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"username\": \"admin3\",\r
+
+    \  \"password\": \"admin123\",\r
+
+    \  \"role\": \"ADMIN\"\r
+
+    }"
+order: 2000
