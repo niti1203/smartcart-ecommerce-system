@@ -1,6 +1,20 @@
 $kind: http-request
+name: Get all Products
 url: http://localhost:8081/products
 method: GET
 headers:
-  Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3OTUwOTkxMywiZXhwIjoxNzc5NTEzNTEzfQ.v18qc51NnjVHJwAMLurtPX5vTi3380iiw9-wesFBd3o
+  Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjkwIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzgwMDQ1ODg1LCJleHAiOjE3ODAwNDk0ODV9.v-r4SyBy1eRxGGvalMloKfuj4NLx5TIKjHSirrIsRhg
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Laptop\",\r
+
+    \  \"price\": 50000,\r
+
+    \  \"category\": \"Electronics\",\r
+
+    \  \"description\": \"Gaming Laptop\"\r
+
+    }"
 order: 1000
