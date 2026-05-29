@@ -1,13 +1,14 @@
 $kind: http-request
-url: http://localhost:8082/users/register
+name: Registering USer
+url: http://localhost:9090/users/register
 method: POST
 body:
   type: json
   content: "{\r
 
-    \  \"username\": \"Akshitha\",\r
+    \  \"username\": \"user1\",\r
 
-    \  \"password\": \"aks123\",\r
+    \  \"password\": \"user123\",\r
 
     \  \"role\": \"USER\"\r
 

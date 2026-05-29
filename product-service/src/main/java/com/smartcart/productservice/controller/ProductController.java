@@ -2,6 +2,7 @@ package com.smartcart.productservice.controller;
 
 import com.smartcart.productservice.dto.ProductDTO;
 import com.smartcart.productservice.service.ProductService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class ProductController {
         return productService.getProductsSortedByPrice();
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/add")
     public ProductDTO addProduct(@RequestBody ProductDTO productDTO) {
         return productService.addProduct(productDTO);
